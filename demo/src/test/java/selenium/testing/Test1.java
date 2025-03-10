@@ -30,13 +30,18 @@ public class Test1 {
 
         // Allows webpage to load for 2 seconds before trying to find elements
         // Variable created to allow for 2 seconds of no action
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
 
         // Declaration of WebElement instance variables for username & password fields
         WebElement userName = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("username")));
         userName.sendKeys(credentialOne);
         WebElement passWord = wait.until(ExpectedConditions.visibilityOfElementLocated(By.name("password")));
         passWord.sendKeys(credentialTwo);
+
+        // Declares variable for login button element & clicks it
+        WebElement loginButton = driver.findElement(By.className("oxd-button"));
+        loginButton.click();
+
     } // orangeHRMTest
 
     @AfterClass
