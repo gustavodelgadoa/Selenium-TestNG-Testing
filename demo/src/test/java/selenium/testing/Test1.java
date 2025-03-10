@@ -20,7 +20,7 @@ public class Test1 {
     @BeforeClass
     public void setUp() {
         System.out.println("Initial setup starting");
-        driver = new ChromeDriver(); // Initializes driver variable with isntance of ChromeDriver
+        driver = new ChromeDriver(); // Initializes driver variable with instance of ChromeDriver
     } // setUp
 
     @Test
@@ -39,7 +39,7 @@ public class Test1 {
         passWord.sendKeys(credentialTwo);
 
         // Declares variable for login button element & clicks it
-        WebElement loginButton = driver.findElement(By.className("oxd-button"));
+        WebElement loginButton = driver.findElement(By.cssSelector("button.oxd-button"));
         loginButton.click();
 
     } // orangeHRMTest
