@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -42,11 +43,22 @@ public class Test1 {
         WebElement loginButton = driver.findElement(By.cssSelector("button.oxd-button"));
         loginButton.click();
 
+        // Declares WebElement variable after waiting.
+        // Once element is present, it passes the elements text into actualResult
+        // variable.
+        // Finally an assert tests if actualResult equals "Dashboard". This ensures it
+        // correctly loaded the next page after login.
+        WebElement dashboardText = wait
+                .until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h6.oxd-text")));
+        String actualResult = dashboardText.getText();
+        String expectedResult = "Dashboard";
+        Assert.assertEquals(actualResult, expectedResult);
+
     } // orangeHRMTest
 
     @AfterClass
     public void tearDown() {
-        // driver.quit(); // closes browser
+        driver.quit(); // closes browser
     } // tearDown
 
 } // Test1
