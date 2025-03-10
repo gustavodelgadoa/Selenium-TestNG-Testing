@@ -13,6 +13,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+/**
+ * Test that automates entering username & password credentials + logging in +
+ * confirms login.
+ */
 public class Test1 {
     WebDriver driver; // Reference variable of type WebDriver
     String credentialOne = "Admin"; // username credentials
