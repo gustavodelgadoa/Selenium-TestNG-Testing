@@ -17,7 +17,7 @@ import org.testng.annotations.Test;
  * Test that automates entering username & password credentials + logging in +
  * confirms login.
  */
-public class Test1 {
+public class orangeHRMTest1 {
     WebDriver driver; // Reference variable of type WebDriver
     String credentialOne = "Admin"; // username credentials
     String credentialTwo = "admin123"; // password credentials
