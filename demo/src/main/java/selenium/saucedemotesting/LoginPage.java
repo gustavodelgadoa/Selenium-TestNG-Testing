@@ -1,4 +1,4 @@
-package selenium.testing;
+package selenium.saucedemotesting;
 
 import org.openqa.selenium.By;
 

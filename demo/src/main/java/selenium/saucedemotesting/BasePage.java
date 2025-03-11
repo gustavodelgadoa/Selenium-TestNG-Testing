@@ -1,4 +1,4 @@
-package selenium.testing;
+package selenium.saucedemotesting;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -30,7 +30,7 @@ public class BasePage {
      * @param locator
      * @return
      */
-    protected static WebElement find(By locator) {
+    protected WebElement find(By locator) {
         return driver.findElement(locator);
     } // find
 
