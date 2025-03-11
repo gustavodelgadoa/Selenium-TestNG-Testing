@@ -30,7 +30,7 @@ public class BasePage {
      * @param locator
      * @return
      */
-    protected WebElement find(By locator) {
+    protected static WebElement find(By locator) {
         return driver.findElement(locator);
     } // find
 

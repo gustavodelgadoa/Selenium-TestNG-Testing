@@ -1,6 +1,5 @@
 package selenium.testing;
 
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -10,8 +9,6 @@ public class BaseTest {
     // Instance Variables
     protected WebDriver driver;
     protected BasePage basePage;
-    private String credentialOne = "standard_user";
-    private String credentialTwo = "secret_sauce";
     private String url = "https://www.saucedemo.com/";
     protected LoginPage loginPage;
 
