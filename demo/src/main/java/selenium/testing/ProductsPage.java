@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 /**
  * 
  */
-public class ProductsPage extends BasePage{
+public class ProductsPage extends BasePage {
 
     // Instance Variables
     private By productsLogo = By.cssSelector("span.title");
@@ -15,4 +15,13 @@ public class ProductsPage extends BasePage{
     WebElement productsLogoText = find(productsLogo);
     String actualResult = productsLogoText.getText();
     String expectedResult = "Products";
+
+    /**
+     * Returns True or False if products page is displayed.
+     * 
+     * @return
+     */
+    public boolean isProductsHeaderDisplayed() {
+        return actualResult.equals(expectedResult);
+    } // isProductsHeaderDisplayed
 } // ProductsPage
